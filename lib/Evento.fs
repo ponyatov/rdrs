@@ -217,11 +217,11 @@ jobs = 2
 incremental = true
 
 [target.x86_64-unknown-linux-gnu]
-features = ["pc","i5","x86_64","linux"]
+# features = ["pc","i5","x86_64","linux"]
 linker   = "x86_64-linux-gnu-gcc"
 
 [target.aarch64-unknown-linux-gnu]
-features = ["pi800","rk3399","aarch64","linux"]
+# features = ["pi800","rk3399","aarch64","linux"]
 linker   = "aarch64-linux-gnu-gcc"
 
 [target.armv7-unknown-linux-gnueabihf]
