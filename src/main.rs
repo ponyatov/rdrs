@@ -8,6 +8,7 @@ fn main() {
     for (i, argv) in argv.iter().enumerate().skip(1) {
         arg(i, argv);
     }
+    println!("{}", page_size::get());
 }
 
 fn arg(argc: usize, argv: &str) {
