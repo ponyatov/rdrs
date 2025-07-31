@@ -692,6 +692,6 @@ let package:unit = //
     \"license\": \"{LICENSE}\"
 }}
 ")
-    // npm i -g deno typescript
+    spawn "npm i -g deno typescript"
 
 spawn COMMIT

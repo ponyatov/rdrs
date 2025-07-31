@@ -1,0 +1,12 @@
+{
+    "name"        : "rdrs",
+    "version"     : "0.0.1",
+    "description" : "Read Rust",
+    "main"        : "src/rdrs.ts",
+    "directories" : { "doc": "doc", "src": "src" },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Dmitry Ponyatov <dponyatov@gmail.com>",
+    "license": "MIT"
+}
