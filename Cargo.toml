@@ -8,11 +8,11 @@ repository  =  "https://github.com/ponyatov/rdrs"
 edition     =  "2024"
 
 [[bin]]
-name = "rdrsd"
+name = "server"
 path = "src/server.rs"
 
 [[bin]]
-name = "rdrs"
+name = "main"
 path = "src/main.rs"
 
 [lib]

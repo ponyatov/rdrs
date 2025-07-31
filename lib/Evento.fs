@@ -312,11 +312,11 @@ repository  =  \"{GITHUB}\"
 edition     =  \"2024\"
 
 [[bin]]
-name = \"{app}d\"
+name = \"server\"
 path = \"src/server.rs\"
 
 [[bin]]
-name = \"{app}\"
+name = \"main\"
 path = \"src/main.rs\"
 
 [lib]
@@ -479,9 +479,9 @@ let settings:unit = //
     },
     "files.associations": {
         "*.mk": "makefile", "*.make": "makefile",
-        "*.s": "arm", "*.s.fix": "arm", "*.S": "arm",
         "*.ld": "linkerscript", "*.ld.fix": "linkerscript",
         "*.ioc": "properties", "*.ocd": "properties",
+        "*.s": "arm", "*.s.fix": "arm", "*.S": "arm",
         "*.kernel": "properties", "*.config": "properties",
         "*.service": "systemd-unit-file",
         "requirements.*": "properties",
@@ -497,11 +497,13 @@ let settings:unit = //
     "editor.detectIndentation": false,
     "editor.rulers": [80],
     "editor.lineNumbers": "on",
-    "editor.formatOnSave":  false,
+    "editor.formatOnSave": false,
     "workbench.tree.indent": 24,
     "editor.fontSize": 14,
     "explorer.autoReveal": false,
     "terminal.integrated.copyOnSelection": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 2222,
     // "git.enabled": false,
 }
 """)
@@ -574,7 +576,7 @@ let cmake: unit = //
         touch $"cmake/{cm}.cmake"
     let TXT = "cp ~/em/CMakeLists.txt CMakeLists.txt"
     let PRESET = "meld CMakePresets.json ~/em/CMakePresets.json"
-    let CMK = "meld cmake ~/em/cmake"
+    meld "cmake"
 
 let apt:unit = //
     File.WriteAllText ("apt.Debian","""git make curl
@@ -617,9 +619,9 @@ let prettierrc:unit = //
 
 let editorconfig:unit = //
     File.WriteAllText (".editorconfig","""# fantomas config
-indent_size = 4
-max_line_length = 80
-end_of_line = lf
+indent_size          = 4
+max_line_length      = 80
+end_of_line          = lf
 insert_final_newline = true
 """)
 
